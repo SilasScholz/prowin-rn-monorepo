@@ -1,0 +1,26 @@
+{
+  "name": "prowin-rn-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "start:ios": "yarn workspace @prowin-messenger/app ios",
+    "start:android": "yarn workspace @prowin-messenger/app android",
+    "start:app": "yarn workspace @prowin-messenger/app start",
+    "pod-install": "cd products/app/ios && pod install && cd ../../.."
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "products/**"
+    ],
+    "nohoist": []
+  },
+  "dependencies": {
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
